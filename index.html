@@ -1,25 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Modular Modules</title>
-  <link rel="stylesheet" type="text/css" href="main.css">
-</head>
-<body>
-  <div>
-    <h1>People</h1>
-    <input placeholder="name" type="text">
-    <button id="addPerson">Add Person</button>
-    <ul id="people">
+<div id="peopleModule">
+  <h1>People</h1>
+  <input placeholder="name" type="text">
+  <button id="addPerson">Add Person</button>
+  <ul id="people">
       <script id="people-template" type="text/template">
-        {{#people}}
-          <li>
-            <span>{{.}}</span>
-            <i class="del">X</i>i>
-          </li>
-        {{/people}}
+          {{#people}}
+              <li>
+                  <span>{{.}}</span>
+                  <i class="del">X</i>
+              </li>
+          {{/people}}
       </script>
-    </ul>
-  </div>
-  <script src="script.js"></script>
-</body>
-</html>
+  </ul>
+
+</div>
+<script src="/bower_components/mustache.js/mustache.min.js"></script>
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="script.js"></script>

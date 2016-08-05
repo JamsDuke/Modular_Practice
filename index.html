@@ -5,7 +5,21 @@
   <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-  <h1>CSS Works</h1>
+  <div>
+    <h1>People</h1>
+    <input placeholder="name" type="text">
+    <button id="addPerson">Add Person</button>
+    <ul id="people">
+      <script id="people-template" type="text/template">
+        {{#people}}
+          <li>
+            <span>{{.}}</span>
+            <i class="del">X</i>i>
+          </li>
+        {{/people}}
+      </script>
+    </ul>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
